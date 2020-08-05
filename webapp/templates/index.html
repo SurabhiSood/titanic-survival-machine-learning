@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<style>
+    form {
+        margin: auto;
+        width: 35%;
+    }
+    
+    .result {
+        margin: auto;
+        width: 35%;
+        border: 1px solid #ccc;
+    }
+</style>
+
+<head>
+    <title>Will you survive the Titanic?</title>
+</head>
+<form action="{{ / }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+
+        <!-- TODO: Drop down text displays Numeric value and descriptive text. S/b only text. -->
+        <label for="passclass">Choose your Passenger Class from the list:</label>
+        <input list="pclass" id="passclass" required>
+        <datalist name='Pclass' id="pclass">
+          <option value="1">First Class</option>
+          <option value="2">Second Class</option>
+          <option value="3">Third Class</option>
+        </datalist>
+        <br>
+        <br>
+        <label for="gender">Choose your sex from the list:</label>
+        <input name='Sex' list="sex" id="gender" required>
+        <datalist id="sex">
+          <option value="1">Female</option>
+          <option value="0">Male</option>
+        </datalist>
+        <br>
+        <br> Age:
+        <input name="Age" type="number" min="0" max="123" oninput="validity.valid||(value='');" required>
+        <!-- TODO
+            Need to auto-notify manual entries that are <0 & >123 
+            Current code will reset with no notification-->
+        <br>
+        <br> Enter the combined total of your siblings and spouses:
+        <input name="SibSp" type="number" min="0" max="10" oninput="validity.valid||(value='');" required>
+        <br>
+        <br> Enter the combined total of your parents and children:
+        <input name="Parch" type="number" min="0" max="10" oninput="validity.valid||(value='');" required>
+        <br>
+        <br> Fare Paid ($0-$515):
+        <input name="Fare" type="number" min="0" max="515" oninput="validity.valid||(value='');" required>
+        <br>
+        <br>
+        <label for="embarked">From which city will you board?:</label>
+        <input list='Embarked' id="embarked" required>
+        <datalist id="Embarked">
+          <option value="1">Cherbourg</option>
+          <option value="2">Queenstown</option>
+          <option value="3">Southampton</option>
+        </datalist>
+        <br>
+        <br>
+        <input type="submit">
+
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if result %} {% for variable, value in original_input.items() %}
+    <b>{{ variable }}</b> : {{ value }} {% endfor %}
+    <br>
+    <br> Predicted number of bikes in use:
+    <p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
+
+</html>
