@@ -1,34 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Bootstrap Example</title>
+        <!-- Theme Made By www.w3schools.com - No Copyright -->
+        <title>Titanic</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel='stylesheet' href='style.css'>
     </head>
 
     <body>
-
+        <!-- Navbar -->
         <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">WebSiteName</a>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">TITANIC</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">METHODOLOGY</a></li>
+                    <li><a href="#">APP</a></li>
+                    <li><a href="#">US</a></li>
+                  </ul>
+                </div>
             </div>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Page 1</a></li>
-              <li><a href="#">Page 2</a></li>
-              <li><a href="#">Page 3</a></li>
-            </ul>
-          </div>
         </nav>
-          
-        <div class="container">
-          <h3>Basic Navbar Example</h3>
-          <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+            
+        <!-- First Container -->
+        <div class="container-fluid bg-1 text-center">
+            <h3 class="margin">Exploring Survival on the Titanic</h3>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1200px-RMS_Titanic_3.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Ship" width="750" height="750">
         </div>
-        
+            
+        <!-- Second Container -->
+        <div class="container-fluid bg-2 text-center">
+            <h3 class="margin">BACKGROUND ON OUR DATASET</h3>
+            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"> RMS Titanic was a British passenger liner operated by the White Star Line that sank in the North Atlantic 
+                Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage from Southampton to New York City. 
+                Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. 
+            </p>
+            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"> By examining factors such as class, sex, and age, in our dataset we will experiment with different machine learning algorithms and build 
+                a program that can predict whether a given passenger would have survived this disaster. To get sense of the variables, their class type, and the first few 
+                observations of each. We know we’re working with 891 observations of 12 variables. To make things a bit more explicit since a couple of the variable names aren’t 
+                100% illuminating, here’s what we’ve got to deal with:
+            </p>
+            <table class="table-bordered table-condensed border center" style="font: 15px Montserrat, sans-serif">
+                <thead>
+                    <tr>
+                        <th>Variable Name</th>
+                        <th style="text-align:center">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Survived</td>
+                    <td style="text-align:center">Survived (1) or died (0)</td>
+                    </tr>
+                <tr>
+                    <td>Pclass</td>
+                    <td style="text-align:center">Passenger's class</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td style="text-align:center">Passenger's name</td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td style="text-align:center">Passenger's sex</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td style="text-align:center">Passenger's age</td>
+                </tr>
+                <tr>
+                    <td>SibSp</td>
+                    <td style="text-align:center">Number of siblings/spouses aboard</td>
+                </tr>
+                <tr>
+                    <td>Parch</td>
+                    <td style="text-align:center">Number of parents/children aboard</td>
+                </tr>
+                <tr>
+                    <td>Ticket</td>
+                    <td style="text-align:center">Ticket number</td>
+                </tr>
+                <tr>
+                    <td>Fare</td>
+                    <td style="text-align:center">Fare</td>
+                </tr>
+                <tr>
+                    <td>Cabin</td>
+                    <td style="text-align:center">Cabin</td>
+                </tr>
+                <tr>
+                    <td>Embarked</td>
+                    <td style="text-align:center">Port of embarkation</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+            
+        <!-- Third Container (Grid) -->
+        <div class="container-fluid bg-3 text-center">    
+            <h3 class="margin">METHODOLOGY</h3><br>
+            <div class="row">
+                <div class="col-sm-4">
+                  <p style="text-align: justify;"><b>Missing Values -</b> Age,Cabin,Fare and Embarked are the columns for missing values. 
+                    We will work on imputing missing field data</p>
+                <br/>
+                  <img src="img/Dataset.PNG" class="img-responsive margin" alt="Image" style="width:80%">
+                </div>
+                <div class="col-sm-4"> 
+                  <p style="text-align: justify;"><b>Feature Engineering Name -</b> categorize passengers through the titles in the name to 
+                    see is there is any relationship between name and survival</p>
+                <br/>
+                <br/>
+                  <img src="img/TitleSurvived.png" height="300px" width="500px" alt="Image">
+                </div>
+                <div class="col-sm-4"> 
+                  <p style="text-align: justify;"><b>Feature Engineering Family Size -</b>SibSp and Parch would make more sense as a combined feature, 
+                    that shows the total number of relatives, a person has on the Titanic. We created a 'relative' column 
+                    and also added a feature that shows if someone is not alone.</p>
+                  <img src="img/FamilySizeAndSurvival.jpg" height="300px" width="500px" alt="Image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                  <p style="text-align: justify;"><b>Relation b/w Survived and Passenger Class- </b>Here we see clearly, that Pclass is contributing to 
+                    a persons chance of survival, especially if this person is in class 1. We will create another pclass plot below.</p>
+                  <img src="img/PassengerClassAndSurvival.png" height="400px" width="500px" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-4"> 
+                  <p style="text-align: justify;"><b>Missing Value-Fare :</b>The visualization shows that the fare would be somewhere greater than 7 and less 
+                        than 10, this adds another filter to calculate mean. post appling all three filters we get the mean of 8.03. 
+                        Which will be replaced by nan value in Mr.Storey's fare!</p>
+                  <img src="img/FarePlot.png" class="img-responsive margin" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-4"> 
+                  <p style="text-align: justify;"><b>Missing Value-Embarkment :</b>The median fare for a first class passenger departing from Charbourg (‘C’) coincides nicely with the $80 paid by our embarkment
+                      -deficient passengers. I think we can safely replace the NA values with ‘C’.</p>
+                  <img src="img/MissingEmbarkment.png" class="img-responsive margin" style="width:100%" alt="Image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                  <p style="text-align: justify;"><b>Best Features</b></p>
+                  <img src="img/BestFeatures.png" class="img-responsive margin" style="width:100%" alt="Image">
+                </div>
+                <!-- <div class="col-sm-4"> 
+                  <p><b>Missing Value-Fare :</b>The visualization shows that the fare would be somewhere greater than 7 and less than 10, this adds 
+                      another filter to calculate mean. post appling all three filters we get the mean of 8.03. Which will 
+                      be replaced by nan value in Mr.Storey's fare!</p>
+                  <img src="img/FarePlot.png" class="img-responsive margin" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-4"> 
+                  <p><b>Missing Value-Embarkment :</b>The median fare for a first class passenger departing from Charbourg (‘C’) coincides nicely with the $80 paid by our embarkment
+                      -deficient passengers. I think we can safely replace the NA values with ‘C’.</p>
+                  <img src="img/MissingEmbarkment.png" class="img-responsive margin" style="width:100%" alt="Image">
+                </div> -->
+            </div>
+        </div>
     </body>
 </html>
+            
+   
+
