@@ -42,7 +42,7 @@
             
         <!-- Second Container -->
         <div class="container-fluid bg-2 text-center">
-            <h3 class="margin">BACKGROUND ON OUR DATASET</h3>
+            <h3 class="margin">PRE-PROCESSING DATA</h3>
             <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"> RMS Titanic was a British passenger liner operated by the White Star Line that sank in the North Atlantic 
                 Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage from Southampton to New York City. 
                 Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. 
@@ -112,60 +112,78 @@
         <div class="container-fluid bg-3 text-center">    
             <h3 class="margin">METHODOLOGY</h3><br>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <p style="text-align: justify;"><b>Missing Values -</b> Age,Cabin,Fare and Embarked are the columns for missing values. 
                     We will work on imputing missing field data</p>
-                <br/>
-                  <img src="img/Dataset.PNG" class="img-responsive margin" alt="Image" style="width:80%">
+                  <img src="https://raw.githubusercontent.com/SurabhiSood/titanic-survival-machine-learning/Preethi_branch/static/img/nullvalue_vis.png" class="img-responsive margin" style="width:100%" alt="Image" style="width:80%">
                 </div>
-                <div class="col-sm-4"> 
+                <div class="col-sm-6"> 
+                  <p style="text-align: justify;"><b>survived-perished</b></p>
+                  <img src="img/survived-perished.PNG" class="img-responsive margin" style="width:30%" alt="Image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                  <p style="text-align: justify;"><b>survived-by-gender</b></p>
+                  <img src="img/age-survival.PNG" class="img-responsive margin" style="width:40%" alt="Image">
+                </div>
+                <div class="col-sm-6"> 
+                  <p style="text-align: justify;"><b>Feature Engineering Name -</b> categorize passengers through the titles in the name to 
+                    see is there is any relationship between name and survival</p>
+                  <img src="img/TitleSurvived.png" class="img-responsive margin" style="width:100%" alt="Image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                  <p style="text-align: justify;"><b>passengers-by-age</b></p>
+                <br/>
+                  <img src="img/age-survival.PNG" class="img-responsive margin" style="width:30%">
+                </div>
+                <div class="col-sm-6"> 
                   <p style="text-align: justify;"><b>Feature Engineering Name -</b> categorize passengers through the titles in the name to 
                     see is there is any relationship between name and survival</p>
                 <br/>
                 <br/>
-                  <img src="img/TitleSurvived.png" height="300px" width="500px" alt="Image">
+                  <img src="img/TitleSurvived.png" class="img-responsive margin" style="width:100%" alt="Image">
                 </div>
-                <div class="col-sm-4"> 
+            </div>
+            <div class='row'>
+                <div class="col-sm-6"> 
                   <p style="text-align: justify;"><b>Feature Engineering Family Size -</b>SibSp and Parch would make more sense as a combined feature, 
                     that shows the total number of relatives, a person has on the Titanic. We created a 'relative' column 
                     and also added a feature that shows if someone is not alone.</p>
-                  <img src="img/FamilySizeAndSurvival.jpg" height="300px" width="500px" alt="Image">
+                  <img src="img/FamilySizeAndSurvival.jpg"class="img-responsive margin" style="width:100%" alt="Image">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <p style="text-align: justify;"><b>Relation b/w Survived and Passenger Class- </b>Here we see clearly, that Pclass is contributing to 
                     a persons chance of survival, especially if this person is in class 1. We will create another pclass plot below.</p>
-                  <img src="img/PassengerClassAndSurvival.png" height="400px" width="500px" style="width:100%" alt="Image">
+                  <img src="img/PassengerClassAndSurvival.png" class="img-responsive margin" style="width:70%" alt="Image">
                 </div>
-                <div class="col-sm-4"> 
+            </div>
+            <div class='row'>
+                <div class="col-sm-6"> 
                   <p style="text-align: justify;"><b>Missing Value-Fare :</b>The visualization shows that the fare would be somewhere greater than 7 and less 
                         than 10, this adds another filter to calculate mean. post appling all three filters we get the mean of 8.03. 
                         Which will be replaced by nan value in Mr.Storey's fare!</p>
-                  <img src="img/FarePlot.png" class="img-responsive margin" style="width:100%" alt="Image">
+                  <img src="img/FarePlot.png" class="img-responsive margin" style="width:70%" alt="Image">
                 </div>
-                <div class="col-sm-4"> 
+                <div class="col-sm-6"> 
                   <p style="text-align: justify;"><b>Missing Value-Embarkment :</b>The median fare for a first class passenger departing from Charbourg (‘C’) coincides nicely with the $80 paid by our embarkment
                       -deficient passengers. I think we can safely replace the NA values with ‘C’.</p>
-                  <img src="img/MissingEmbarkment.png" class="img-responsive margin" style="width:100%" alt="Image">
+                  <img src="img/MissingEmbarkment.png" class="img-responsive margin" style="width:70%" alt="Image">
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <p style="text-align: justify;"><b>Best Features</b></p>
-                  <img src="img/BestFeatures.png" class="img-responsive margin" style="width:100%" alt="Image">
+                  <img src="img/BestFeatures.png" class="img-responsive margin" style="width:70%" alt="Image">
                 </div>
-                <!-- <div class="col-sm-4"> 
+                <div class="col-sm-6"> 
                   <p><b>Missing Value-Fare :</b>The visualization shows that the fare would be somewhere greater than 7 and less than 10, this adds 
                       another filter to calculate mean. post appling all three filters we get the mean of 8.03. Which will 
                       be replaced by nan value in Mr.Storey's fare!</p>
-                  <img src="img/FarePlot.png" class="img-responsive margin" style="width:100%" alt="Image">
+                  <img src="img/FarePlot.png" class="img-responsive margin" style="width:70%" alt="Image">
                 </div>
-                <div class="col-sm-4"> 
-                  <p><b>Missing Value-Embarkment :</b>The median fare for a first class passenger departing from Charbourg (‘C’) coincides nicely with the $80 paid by our embarkment
-                      -deficient passengers. I think we can safely replace the NA values with ‘C’.</p>
-                  <img src="img/MissingEmbarkment.png" class="img-responsive margin" style="width:100%" alt="Image">
-                </div> -->
             </div>
         </div>
     </body>
