@@ -18,7 +18,8 @@ RMS Titanic was a British passenger liner operated by the White Star Line that s
 * While the Titanic was sinking, the officers famously prioritized who was allowed in a lifeboat with the strict maritime tradition of evacuating women and children first. Our statistical results clearly reflect the first part of this policy as, across all classes, women were much more likely to survive than the men. 
 ![Visualizing Gender Survival](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/gender-survival.PNG)
 
-* Here we see clearly, that Pclass is contributing to a persons chance of survival, especially if this person is in class 1. We will create another pclass plot below.![Passenger Class Survival](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/PassengerClassAndSurvival.png)
+* Here we see clearly, that Pclass is contributing to a persons chance of survival, especially if this person is in class 1. We will create another pclass plot below.
+![Passenger Class Survival](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/PassengerClassAndSurvival.png)
 
 * We broke passenger Name down into additional meaningful variables which can feed predictions. Passenger title is contained within the passenger name variable categorize passengers through the titles in the name and drew relation with survival
 ![Feature Engineering Title](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/TitleSurvived.png)
