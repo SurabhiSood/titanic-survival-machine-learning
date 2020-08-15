@@ -1,1 +1,4 @@
-# titanic-survival-machine-learning
+### Goal 
+RMS Titanic was a British passenger liner operated by the White Star Line that sank in the North Atlantic Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage from Southampton to New York City.Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. By examining factors such as class, sex, and age, in our dataset we will experiment with different machine learning algorithms and build a program that can predict whether a given passenger would have survived this disaster. To get sense of the variables, their class type, and the first few observations of each. We know we’re working with 1309 observations of 14 variables. To make things a bit more explicit since a couple of the variable names aren’t 100% illuminating, here’s what we’ve got to deal with:
+
+![Overview](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/img/Overview.PNG)
