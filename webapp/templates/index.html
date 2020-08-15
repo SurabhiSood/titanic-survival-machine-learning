@@ -1,79 +1,171 @@
-<!doctype html>
-<html>
-<style>
-    form {
-        margin: auto;
-        width: 35%;
-    }
-    
-    .result {
-        margin: auto;
-        width: 35%;
-        border: 1px solid #ccc;
-    }
-</style>
+<!DOCTYPE html>
+
+<html lang="en">
 
 <head>
-    <title>Will you survive the Titanic?</title>
-</head>
-<form action="{{ / }}" method="POST">
-    <fieldset>
-        <legend>Input values:</legend>
+    <meta charset="UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- TODO: Drop down text displays Numeric value and descriptive text. S/b only text. -->
-        <label for="passclass">Choose your Passenger Class from the list:</label>
-        <input list="pclass" id="passclass" required>
-        <datalist name='Pclass' id="pclass">
-          <option value="1">First Class</option>
-          <option value="2">Second Class</option>
-          <option value="3">Third Class</option>
-        </datalist>
-        <br>
-        <br>
-        <label for="gender">Choose your sex from the list:</label>
-        <input name='Sex' list="sex" id="gender" required>
-        <datalist id="sex">
-          <option value="1">Female</option>
-          <option value="0">Male</option>
-        </datalist>
-        <br>
-        <br> Age:
-        <input name="Age" type="number" min="0" max="123" oninput="validity.valid||(value='');" required>
-        <!-- TODO
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Will you survive the Titanic?</title>
+    <style>
+        #expimg {
+            margin: 30px;
+        }
+        
+        form {
+            margin: auto;
+            width: 35%;
+        }
+        
+        .result {
+            margin: auto;
+            width: 35%;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- -------------BEGIN NAV BAR --------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" id="badge" href="#">Will you survive the Titanic?</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-right ml-auto">
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="methodology.html">Methodology <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="templates/about.html">Test <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- -------------END NAV BAR --------------------- -->
+
+
+
+
+    <div class="page-container">
+        <form action="/" method="POST">
+            <fieldset class="fieldset">
+                <div class="row uniform">
+
+                    <legend>Enter Passenger Details:</legend>
+
+                    <!-- TODO: Drop down text displays Numeric value and descriptive text. S/b only text. -->
+                    <div class="col-sm-12">
+                        <div class="select-wrapper">
+                            <label for="Pclass">Choose your Passenger Class from the list:</label>
+                            <!-- <input name='Pclass' list="pclass" id="Pclass" required> -->
+                            <select name='Pclass' id="Pclass">
+                            <option value="1">First Class</option>
+                            <option value="2">Second Class</option>
+                            <option value="3">Third Class</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="select-wrapper">
+                            <label for="Sex">Choose your sex from the list:</label>
+                            <select name='Sex' id="Sex">
+                            <option value="1">Female</option>
+                            <option value="0">Male</option>
+                        </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-2">
+                        <label>Age:</label><br>
+                        <input type="number" name="Age" id="name" value="" min="0" max="123" placeholder="Age" oninput="validity.valid||(value='');" required class="submit-button">
+                    </div>
+                    <!-- <input name="Age" type="number" min="0" max="123" oninput="validity.valid||(value='');" required> -->
+                    <!-- TODO
             Need to auto-notify manual entries that are <0 & >123 
             Current code will reset with no notification-->
-        <br>
-        <br> Enter the combined total of your siblings and spouses:
-        <input name="SibSp" type="number" min="0" max="10" oninput="validity.valid||(value='');" required>
-        <br>
-        <br> Enter the combined total of your parents and children:
-        <input name="Parch" type="number" min="0" max="10" oninput="validity.valid||(value='');" required>
-        <br>
-        <br> Fare Paid ($0-$515):
-        <input name="Fare" type="number" min="0" max="515" oninput="validity.valid||(value='');" required>
-        <br>
-        <br>
-        <label for="embarked">From which city will you board?:</label>
-        <input list='Embarked' id="embarked" required>
-        <datalist id="Embarked">
-          <option value="1">Cherbourg</option>
-          <option value="2">Queenstown</option>
-          <option value="3">Southampton</option>
-        </datalist>
-        <br>
-        <br>
-        <input type="submit">
 
-    </fieldset>
-</form>
-<br>
-<div class="result" align="center">
-    {% if result %} {% for variable, value in original_input.items() %}
-    <b>{{ variable }}</b> : {{ value }} {% endfor %}
-    <br>
-    <br> Predicted number of bikes in use:
-    <p style="font-size:50px">{{ result }}</p>
-    {% endif %}
-</div>
+                    <div class="col-sm-4">
+                        <label>Siblings/Spouses:</label><br>
+                        <input name="SibSp" type="number" min="0" max="10" oninput="validity.valid||(value='');" value placeholder="#" required class="submit-button">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label>Parents/Children:</label><br>
+                        <input name="Parch" type="number" min="0" max="10" oninput="validity.valid||(value='');" value placeholder="#" required class="submit-button">
+                    </div>
+
+                    <div class="col-sm-2">
+
+                        <label>Fare:</label><br>
+                        <input name="Fare" type="number" min="0" max="515" oninput="validity.valid||(value='');" value placeholder="$" required class="submit-button">
+                    </div>
+
+
+
+                    <div class="col-sm-12">
+                        <div class="select-wrapper">
+                            <label for="embarked">From which city will you board?:</label>
+                            <!-- <input list='Embarked' id="embarked" required> -->
+                            <select name="Embarked" id="Embarked">
+                            <option value="1">Cherbourg</option>
+                            <option value="2">Queenstown</option>
+                            <option value="3">Southampton</option>
+                        </select>
+                        </div>
+                    </div>
+                    <!-- <br><br><br><br><br> -->
+
+                    <!-- <input class="button special" type="submit" value="Submit"> -->
+                    <input type="submit">
+                    <!-- 2671 2787  -->
+                </div>
+            </fieldset>
+        </form>
+
+
+        <div class="result" align="center">
+            <!-- {% if result %} {% for variable, value in original_input.items() %}
+        <b>{{ variable }}</b> : {{ value }} {% endfor %} -->
+            <br>
+            <!-- <br> Likelihood of survival: -->
+            <p style="font-size:50px">{{ result }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Footer -->
+        <!-- <footer id="footer" class="footer1">
+            <div class="inner">
+                <div class="flex">
+                    <div>
+                        Titanic ML Project
+                    </div>
+                    <ul class="icons">
+                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+                        <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+                        <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer> -->
+    </div>
 
 </html>

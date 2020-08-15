@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Will you survive the Titanic?</title>
+
+
+</head>
+
+
+
+<body>
+
+    <!-- -------------BEGIN NAV BAR --------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" id="badge" href="index.html">Titanic ML Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-right ml-auto">
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="methodology.html">Methodology <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="templates/about.html">Test <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- -------------END NAV BAR --------------------- -->
+
+    <!-- -------------BEGIN HEADER------------- -->
+    <section id="main" class="wrapper">
+        <div class="inner">
+
+            <header class="align-center">
+                <h2>Methodology</h2>
+                <!-- <p>Aliquam erat volutpat nam dui </p> -->
+            </header>
+            <h2 id="content">The Project</h2>
+            <p>RMS Titanic was a British passenger liner operated by the White Star Line that sank in the North Atlantic Ocean in the early morning hours of April 15, 1912, after striking an iceberg during her maiden voyage from Southampton to New York City.
+                Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. <br><br> By examining factors such as class, sex, and age in our dataset, we will experiment with different machine learning algorithms and build a program that can
+                predict the answer to: </p>
+            <blockquote>
+                <h2 class="align-center">Would you survive the Titanic?</h2>
+            </blockquote>
+
+            <p>We know we’re working with 1309 observations of 14 variables. To make things a bit more explicit since a couple of the variable names aren’t 100% illuminating, here’s what we’ve got to deal with:</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Variable Name</th>
+                            <th>Description</th>
+                            <!-- <th>Price</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Survived</td>
+                            <td style="text-align:center">Survived (1) or died (0)</td>
+                        </tr>
+                        <tr>
+                            <td>Pclass</td>
+                            <td style="text-align:center">Passenger's class</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td style="text-align:center">Passenger's name</td>
+                        </tr>
+                        <tr>
+                            <td>Sex</td>
+                            <td style="text-align:center">Passenger's sex</td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td style="text-align:center">Passenger's age</td>
+                        </tr>
+                        <tr>
+                            <td>SibSp</td>
+                            <td style="text-align:center">Number of siblings/spouses aboard</td>
+                        </tr>
+                        <tr>
+                            <td>Parch</td>
+                            <td style="text-align:center">Number of parents/children aboard</td>
+                        </tr>
+                        <tr>
+                            <td>Ticket</td>
+                            <td style="text-align:center">Ticket number</td>
+                        </tr>
+                        <tr>
+                            <td>Fare</td>
+                            <td style="text-align:center">Fare</td>
+                        </tr>
+                        <tr>
+                            <td>Cabin</td>
+                            <td style="text-align:center">Cabin</td>
+                        </tr>
+                        <tr>
+                            <td>Embarked</td>
+                            <td style="text-align:center">Port of embarkation</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>100.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="6u 12u$(small)">
+                    <h3>ML Evaluation & Selection</h3>
+                    <p>All the things we did to evaluate ML models,...s.sllkjdkfjf blah more text more textblah blah blah more text more textblah blah blah more text more text. </p>
+                </div>
+                <div class="6u$ 12u$(small)">
+                    <h3>User Input to ML Model</h3>
+                    <p>All the things we did to deploy access to selected ML model,...s.sllkjdkfjf blah more text more textblah blah blah more text more textblah blah blah more text more text. </p>
+                </div>
+            </div>
+            <!-- Break -->
+            <hr class="major" />
+
+            <h3>Reference & Resources</h3>
+            <div class="row">
+                <div class="3u 12u$(small)">
+
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>Python</li>
+                        <ul>
+
+                            <li><a href="https://pandas.pydata.org/docs/#">pandas</a></li>
+                            <li><a href="https://matplotlib.org/contents.html">Matplotlib</a></li>
+                            <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a></li>
+                            <li><a href="https://docs.python.org/2/library/pickle.html">Pickle</a></li>
+
+                        </ul>
+                    </ul>
+                </div>
+                <div class="3u 12u$(small)">
+                    <ul>
+                        <li>Web</li>
+                        <ul>
+                            <li><a href="https://templated.co/">TEMPLATED</a></li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+
+                    </ul>
+                </div>
+
+                <div class="3u 12u$(small)">
+
+                    <h4>Links</h4>
+                    <ul>
+                        <li>Project Repository</li>
+                        <ul>
+                            <li><a href="https://github.com/SurabhiSood/titanic-survival-machine-learning">GitHub</a></li>
+                        </ul>
+                        <li>Data Source</li>
+                        <ul>
+                            <li><a href="https://www.kaggle.com/c/titanic/data">Kaggle Dataset</a></li>
+                        </ul>
+                </div>
+                <div class="3u$ 12u$(small)">
+
+                    <h4>Machine Learning</h4>
+                    <ul>
+                        <li><a href="https://pandas.pydata.org/docs/#">KNN</a></li>
+                        <li><a href="https://pandas.pydata.org/docs/#">Logistic Regression</a></li>
+                        <li><a href="https://pandas.pydata.org/docs/#">CART</a></li>
+                        <li><a href="https://pandas.pydata.org/docs/#">K_means</a></li>
+                        <li><a href="https://pandas.pydata.org/docs/#">Trees</a></li>
+
+                    </ul>
+                </div>
+    </section>
+    <div class="page-container">
+
+    </div>
+
+
+    <!-- *********** SCRIPTS *********** -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
