@@ -10,25 +10,34 @@ RMS Titanic was a British passenger liner operated by the White Star Line that s
 ![Missing Values](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/Dataset.PNG)
 
 * The calculation shows that only 38% of the passengers survived.Not the best odds. The reason for this massive loss of life is that the Titanic was only carrying 20 lifeboats, which was not nearly enough for the 1,317 passengers and 885 crew members aboard.
+
 ![Survival of Passengers](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/survived-perished.PNG)
 
 * The chart displays the number of passengers travelling aboard Titanic categorized based on the age group. 40% of the passengers were in age group of 20-30.
+
 ![Age Demographics of Passengers](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/age-survival.PNG)
 
 * While the Titanic was sinking, the officers famously prioritized who was allowed in a lifeboat with the strict maritime tradition of evacuating women and children first. Our statistical results clearly reflect the first part of this policy as, across all classes, women were much more likely to survive than the men. 
+
 ![Visualizing Gender Survival](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/gender-survival.PNG)
 
 * Here we see clearly, that Pclass is contributing to a persons chance of survival, especially if this person is in class 1. We will create another pclass plot below.
+
 ![Passenger Class Survival](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/PassengerClassAndSurvival.png)
 
 * We broke passenger Name down into additional meaningful variables which can feed predictions. Passenger title is contained within the passenger name variable categorize passengers through the titles in the name and drew relation with survival
+
 ![Feature Engineering Title](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/TitleSurvived.png)
 
-* SibSp and Parch would make more sense as a combined feature, that shows the total number of relatives, a person has on the Titanic. We created a 'relative' column and also added a feature that shows if someone is not alone. ![Feature Engineering Family Size](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/FamilySizeAndSurvival.jpg)
+* SibSp and Parch would make more sense as a combined feature, that shows the total number of relatives, a person has on the Titanic. We created a 'relative' column and also added a feature that shows if someone is not alone. !
 
-* The visualization shows that the fare would be somewhere greater than 7 and less than 10, this adds another filter to calculate mean. post appling all three filters we get the mean of $ 8.03. Which will be replaced by nan value in Mr.Storey's fare! ![Imputing Missing Value in Fare Column](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/FamilySizeAndSurvival.jpg)
+[Feature Engineering Family Size](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/FamilySizeAndSurvival.jpg)
+
+* The visualization shows that the fare would be somewhere greater than 7 and less than 10, this adds another filter to calculate mean. post appling all three filters we get the mean of $ 8.03. Which will be replaced by nan value in Mr.Storey's fare! 
+![Imputing Missing Value in Fare Column](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/FamilySizeAndSurvival.jpg)
 
 * The median fare for a first class passenger departing from Charbourg (‘C’) coincides nicely with the $80 paid by our embarkment-deficient passengers. I think we can safely replace the NA values with ‘C’.
+
 ![Imputing Missing Value in Embarkment Column](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/MissingEmbarkment.png)
 
 * Feature Selection
