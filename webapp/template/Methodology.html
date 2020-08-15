@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel='stylesheet' href='style.css'>
+        <link rel='stylesheet' href='../static/style.css'>
     </head>
 
     <body>
@@ -51,7 +51,7 @@
                 we’re working with 1309 observations of 14 variables. To make things a bit more explicit since a couple of the variable names aren’t 
                 100% illuminating, here’s what we’ve got to deal with:
                 <hr>
-                <img src='img/Overview.PNG' style="width: 50%;">
+                <img src='../static/img/Overview.PNG' style="width: 50%;">
             </p>
         </div>
             
@@ -72,7 +72,7 @@
                   <p style="text-align: justify;"><b>Survival of Passengers </b>The calculation shows that only 38% of the passengers survived. Not the best odds. 
                     The reason for this massive loss of life is that the Titanic was only carrying 20 lifeboats, which was not nearly enough for the 1,317 
                     passengers and 885 crew members aboard.</p>
-                  <img src="img/survived-perished.PNG" height="300px" width="250px" class='center' alt="Image">
+                  <img src="../static/img/survived-perished.PNG" height="300px" width="250px" class='center' alt="Image">
                 </div>
             </div>
             <br/><br/>
@@ -80,7 +80,7 @@
                 <div class="col-sm-5">
                   <p style="text-align: justify;"><b>Age Demographics of Passengers </b>The chart displays the number of passengers travelling aboard Titanic categorized based 
                     on the age group. 40% of the passengers were in age group of 20-30.</p>
-                  <img src="img/age-survival.PNG" class="img-responsive margin center" style="width:80%" alt="Image">
+                  <img src="../static/img/age-survival.PNG" class="img-responsive margin center" style="width:80%" alt="Image">
                 </div>
                 <div class='col-sm-1'></div>
                 <div class="col-sm-5"> 
@@ -95,13 +95,13 @@
                     lifeboat with the strict maritime tradition of evacuating women and children first. Our statistical results clearly reflect the first part of 
                     this policy as, across all classes, women were much more likely to survive than the men.
                 </p>
-                  <img src="img/gender-survival.PNG" class="img-responsive margin center" style="width: 60%;">
+                  <img src="../static/img/gender-survival.PNG" class="img-responsive margin center" style="width: 60%;">
                 </div>
                 <div class='col-sm-1'></div>
                 <div class="col-sm-5">
                   <p style="text-align: justify;"><b>Visualizing Passenger Class Survival </b>Here we see clearly, that Pclass is contributing to 
                     a persons chance of survival, especially if this person is in class 1. We will create another pclass plot below.</p>
-                  <img src="img/PassengerClassAndSurvival.png" class="center" height="500px" width="700px" alt="Image">
+                  <img src="../static/img/PassengerClassAndSurvival.png" class="center" height="500px" width="700px" alt="Image">
                 </div>
             </div>
             <div class='row'>
@@ -109,14 +109,14 @@
                     <p style="text-align: justify;"><b>Feature Engineering Title </b> We broke passenger Name down into additional meaningful variables 
                         which can feed predictions. Passenger title is contained within the passenger name variable categorize passengers through the titles 
                         in the name and drew relation with survival</p>
-                    <img src="img/TitleSurvived.png" class="img-responsive margin center" style="width:100%" alt="Image">
+                    <img src="../static/img/TitleSurvived.png" class="img-responsive margin center" style="width:100%" alt="Image">
                 </div>
                 <div class='col-sm-1'></div>
                 <div class="col-sm-5"> 
                   <p style="text-align: justify;"><b>Feature Engineering Family Size </b>SibSp and Parch would make more sense as a combined feature, 
                     that shows the total number of relatives, a person has on the Titanic. We created a 'relative' column 
                     and also added a feature that shows if someone is not alone.</p>
-                  <img src="img/FamilySizeAndSurvival.jpg" class="img-responsive margin center" style="width:100%" alt="Image">
+                  <img src="../static/img/FamilySizeAndSurvival.jpg" class="img-responsive margin center" style="width:100%" alt="Image">
                 </div>
             </div>
             <div class='row'>
@@ -124,21 +124,21 @@
                   <p style="text-align: justify;"><b>Imputing Missing Value in Fare Column </b>The visualization shows that the fare would be somewhere 
                         greater than 7 and less than 10, this adds another filter to calculate mean. post appling all three filters we get the mean of 
                         $ 8.03. Which will be replaced by nan value in Mr.Storey's fare!</p>
-                  <img src="img/FarePlot.png" class="img-responsive margin center" style="width:90%" alt="Image">
+                  <img src="../static/img/FarePlot.png" class="img-responsive margin center" style="width:90%" alt="Image">
                 </div>
                 <div class='col-sm-1'></div>
                 <div class="col-sm-5"> 
                   <p style="text-align: justify;"><b>Imputing Missing Value in Embarkment Column </b>The median fare for a first class passenger departing
                         from Charbourg (‘C’) coincides nicely with the $80 paid by our embarkment-deficient passengers. I think we can safely replace the 
                         NA values with ‘C’.</p>
-                  <img src="img/MissingEmbarkment.png" class="img-responsive margin center" style="width:90%" alt="Image">
+                  <img src="../static/img/MissingEmbarkment.png" class="img-responsive margin center" style="width:90%" alt="Image">
                 </div>
             </div>
             <div class="row">                
                 <div class="col-sm-5">
                     <p style="text-align: justify;"><b>Extra Tree Classifier for Feature Selection </b>It allows for identification of the most important or influencing 
                         factors on the response (or dependent) variable.</p>
-                    <img src="img/BestFeatures.png" class="img-responsive margin center" style="width:90%" alt="Image">
+                    <img src="../static/img/BestFeatures.png" class="img-responsive margin center" style="width:90%" alt="Image">
                 </div>
                 <div class='col-sm-1'></div>
                 <div class="col-sm-5"> 
