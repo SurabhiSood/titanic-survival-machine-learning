@@ -42,17 +42,18 @@
             
         <!-- Second Container -->
         <div class="container-fluid bg-2 text-center">
-            <h3 class="margin">PRE-PROCESSING DATA</h3>
-            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"> RMS Titanic was a British passenger liner operated by the White Star Line that sank in the North Atlantic 
-                Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage from Southampton to New York City. 
-                Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. 
-            </p>
-            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"> By examining factors such as class, sex, and age, in our dataset we will experiment with different machine learning algorithms and build 
-                a program that can predict whether a given passenger would have survived this disaster. To get sense of the variables, their class type, and the first few 
-                observations of each. We know we’re working with 1309 observations of 14 variables. To make things a bit more explicit since a couple of the variable names aren’t 
+            <h3 class="margin">PROJECT BACKGROUND</h3>
+            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"> RMS Titanic was a British passenger liner operated by the White Star 
+                Line that sank in the North Atlantic Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage 
+                from Southampton to New York City.Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. By examining factors such as class, 
+                sex, and age, in our dataset we will experiment with different machine learning algorithms and build a program that can predict whether a given 
+                passenger would have survived this disaster. To get sense of the variables, their class type, and the first few observations of each. We know 
+                we’re working with 1309 observations of 14 variables. To make things a bit more explicit since a couple of the variable names aren’t 
                 100% illuminating, here’s what we’ve got to deal with:
+                <hr>
+                <img src='img/Overview.PNG' style="width: 50%;">
             </p>
-            <table class="table-bordered table-condensed border center" style="font: 15px Montserrat, sans-serif">
+            <!-- <table class="table-bordered table-condensed border center" style="font: 15px Montserrat, sans-serif">
                 <thead>
                     <tr>
                         <th>Variable Name</th>
@@ -105,12 +106,12 @@
                     <td style="text-align:center">Port of embarkation</td>
                 </tr>
                 </tbody>
-            </table>
+            </table> -->
         </div>
             
         <!-- Third Container (Grid) -->
         <div class="container-fluid bg-3 text-center">    
-            <h3 class="margin">METHODOLOGY</h3><br>
+            <h3 class="margin">PRE-PROCESSING DATA</h3><br>
             <div class="row">
                 <div class="col-sm-5">
                   <p style="text-align: justify;"><b>Dataset overview and Missing Values </b> The chart gives us a sense the variables, and informs us 
@@ -203,14 +204,15 @@
         </div>
         <div class="container-fluid bg-2 text-center">
             <h3 class="margin">PREDICTION MODEL</h3>
-            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"> RMS Titanic was a British passenger liner operated by the White Star Line that sank in the North Atlantic 
-                Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage from Southampton to New York City. 
-                Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. 
+            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"><b>2. Logistic Regression</b> After cleaning the data (replacing missing values with the mean or mode) , we created a new feature called ‘Title’ which was extracted from ‘Name’ column. We encoded columns like ‘Sex’ ,’Title’, ’Port of embarkment’ to be used by the Machine Learning model.
+                We then dropped unwanted columns from the dataframe that will not be used by the model. We selected 7 columns/features:  pclass (class of the passenger) ,survived, sex, age, sibsp(siblings-spouse relationship) ,parch(Parent-Child relationship) ,title.
+                We then split the dataset in to training and testing datasets and created a Logistic Regression model to be run on the dataset. The accuracy of the model was 84%. 
             </p>
-            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"> By examining factors such as class, sex, and age, in our dataset we will experiment with different machine learning algorithms and build 
-                a program that can predict whether a given passenger would have survived this disaster. To get sense of the variables, their class type, and the first few 
-                observations of each. We know we’re working with 1309 observations of 14 variables. To make things a bit more explicit since a couple of the variable names aren’t 
-                100% illuminating, here’s what we’ve got to deal with:
+            <p style="text-align: justify; margin-left: 60px; margin-right: 60px;"><b>3. RandomForestClassifier</b> Started with visualizing the dataset for its variables, missing values and its datatypes.
+                Leading to imputing the missing values and feature engineering new columns from the existing one as described in the charts above. Post dropping those columns 
+                we do not need, converting the data into categorise to prepare them for analysing by using label encoder. After dividing the dataset into X and y 'ExtraTreesClassifier' 
+                was used to select best features leading it to scale the X axis as y is already binary.We go onto split the train-test dataset and fit it to the model. The accuracy of
+                the model was 79.26%
             </p>
         </div>        
     </body>
