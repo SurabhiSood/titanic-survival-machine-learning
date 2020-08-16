@@ -65,11 +65,9 @@
 
                     <legend>Enter Passenger Details:</legend>
 
-                    <!-- TODO: Drop down text displays Numeric value and descriptive text. S/b only text. -->
                     <div class="col-sm-12">
                         <div class="select-wrapper">
                             <label for="Pclass">Choose your Passenger Class from the list:</label>
-                            <!-- <input name='Pclass' list="pclass" id="Pclass" required> -->
                             <select name='Pclass' id="Pclass">
                             <option value="1">First Class</option>
                             <option value="2">Second Class</option>
@@ -107,7 +105,7 @@
                     <div class="col-sm-2">
 
                         <label>Fare:</label><br>
-                        <input name="Fare" type="number" min="0" max="515" oninput="validity.valid||(value='');" value placeholder="£" required class="submit-button">
+                        <input name="Fare" type="number" min="0" max="515" oninput="validity.valid||(value='');" value placeholder="&pound" required class="submit-button">
                     </div>
 
 
@@ -123,10 +121,10 @@
                         </div>
                     </div>
 
-
+                    <div class="col-sm-12"> 
                     <input class="button special" type="submit" value="Submit">
-                    <!-- <input type="submit"> -->
-                    <!-- 2671 2787  -->
+
+                    </div>
                 </div>
             </fieldset>
         </form>
@@ -140,23 +138,6 @@
 
         </div>
 
-        <!-- Footer -->
-        <!-- <footer id="footer" class="footer1">
-            <div class="inner">
-                <div class="flex">
-                    <div>
-                        Titanic ML Project
-                    </div>
-                    <ul class="icons">
-                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-                        <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-                        <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer> -->
     </div>
 
 </html>

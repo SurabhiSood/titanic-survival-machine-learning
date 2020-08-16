@@ -2690,13 +2690,14 @@ button,
     color: #ffffff !important;
     cursor: pointer;
     display: inline-block;
-    font-weight: bold;
+    font-weight: normal;
     display: block;
     margin-right: auto;
     margin-left: auto;
     /* font-weight: 600; */
     /* height: 2.85em; */
-    padding: .05em;
+    /* width: ; */
+    padding: .15em, .30em, .15em;
     line-height: none;
     text-align: center;
     text-decoration: none;
