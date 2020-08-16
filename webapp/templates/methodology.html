@@ -141,7 +141,7 @@
 
                     <div class="6u 12u$(small) flex flex-3 metho-div ">
                         <h3>Dataset Overview and Missing Values</h3>
-                        <p>The chart gives us a sense the variables, and informs us of the missing observations in each column.We see that Age, Cabin, Fare and Embarked columns have missing values which we will impute in the course of Data pre-processing.</p>
+                        <p>The chart gives us a sense of the variables and informs us of the missing observations in each column. We see that Age, Cabin, Fare and Embarked columns have missing values which we will impute in the course of Data pre-processing.</p>
                         <img src="https://raw.githubusercontent.com/SurabhiSood/titanic-survival-machine-learning/Preethi_branch/static/img/nullvalue_vis.png " class="metho-img mx-auto " style="width:100% " alt="Image ">
                     </div>
                     <div class="6u$ 12u$(small) flex flex-3 metho-div ">
@@ -155,12 +155,12 @@
                 <div class="row ">
                     <div class="6u$ 12u$(small) flex flex-3 metho-div ">
                         <h3>Age Demographics of Passengers </h3>
-                        <p>The chart displays the number of passengers travelling aboard Titanic categorized based on the age group. 40% of the passengers were in age group of 20-30.</p>
+                        <p>The chart displays the number of passengers traveling aboard Titanic categorized based by age group. 40% of the passengers were in the age group of 20-30.</p>
                         <img src="../static/images/age-survival.PNG " class="img-responsive margin center " style="width:80% " alt="Image ">
                     </div>
                     <div class="6u$ 12u$(small) flex flex-3 metho-div ">
                         <h3>Visualizing Survival by Age Group</h3>
-                        <p>Here we can see that children were indeed the most likely age group to survive, although this percentage was still tragically below 60%.</p>
+                        <p>Here we can see that children were the most likely age group to survive, although this percentage was still tragically below 60%.</p>
                         <img src="https://raw.githubusercontent.com/SurabhiSood/titanic-survival-machine-learning/Preethi_branch/static/img/pclass_sex.png " class="img-responsive mx-auto " style="width:80%; " alt="Image ">
                     </div>
 
@@ -177,14 +177,14 @@
                     </div>
                     <div class="6u$ 12u$(small) flex flex-3 metho-div ">
                         <h3>Visualizing Passenger Class Survival </h3>
-                        <p>Here we see clearly, that Pclass is contributing to a persons chance of survival, especially if this person is in class 1. We will create another pclass plot below.</p>
+                        <p>Here, we see that Pclass is contributing to a person's chance of survival, especially if this person is in First Class. We will create another Pclass plot below.</p>
                         <img src="../static/images/PassengerClassAndSurvival.png " class="mx-auto " height="350px " width="490px " alt="Image ">
                     </div>
                 </div>
                 <div class='row'>
                     <div class="6u$ 12u$(small) flex flex-3 metho-div ">
                         <h3>Feature Engineering Title </h3>
-                        <p>We broke passenger Name down into additional meaningful variables which can feed predictions. Passenger title is contained within the passenger name variable categorize passengers through the titles in the name and drew relation
+                        <p>We broke Passenger Name down into additional meaningful variables which can feed predictions. Passenger title is contained within the passenger name variable categorize passengers through the titles in the name and drew relation
                             with survival
                         </p>
                         <img src="../static/images/TitleSurvived.png " class="img-responsive mx-auto " style="width:100% " alt="Image ">
@@ -227,8 +227,22 @@
                 <!-- Break -->
                 <hr class="major " />
 
-                <h2 id="content theproject"><a id="pmodel">Prediction Model</a></h2>
-
+                <h2 id="content theproject"><a id="pmodel">Prediction Models</a></h2>
+                <div class="row">
+                    <div class="12u 12u$(small)  flex flex-3 metho-div">
+                        <h3>Most Accurate Tested: KNN</h3>
+                        <p>Out of 8 trained models, the K-Nearest Neighbor model demonstrated the highest accuracy score of 86.36%. The k number with the highest prediction accuracy has been located between 29 – 33 neighbors (see “Value of k for KNN Model” plot). Based on the grid search, KNN model parameter for the p value has been set to 1. The training data score for this model resulted in 80.21%. As demonstrated by the confusion matrix plot, the model produced 4.55% of Type I error and 9.09% of Type II error.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="6u 12u$(small)"><br><br>
+                    <img  class="img-responsive float-left mx-auto" alt="Image" src="../static/images/best-k-number.png">
+                    </div>
+                    <div class="6u 12u$(small)">
+                    <img class="img-responsive float-right mx-auto" alt="Image" src="../static/images/confusion-matrix.png">
+                    </div>
+                </div>
+                <br><br>
                 <div class="row">
                     <div class="6u 12u$(small)">
                         <h3>Logistic Regression</h3>
@@ -262,7 +276,6 @@
                             <li><a href="https://joblib.readthedocs.io/en/latest/">Joblib</a></li>
                             <li><a href="https://docs.python.org/2/library/pickle.html">Pickle</a></li>
                             <li><a href="https://scikit-learn.org/stable/ ">SciKit-Learn</a></li>
-                            <li><a href="https://www.tensorflow.org">TensorFlow</a></li>
 
                         </ul>
                     </div>
@@ -289,11 +302,12 @@
 
                         <h4>Machine Learning</h4>
                         <ul>
-                            <li><a href="https://pandas.pydata.org/docs/# ">KNN</a></li>
-                            <li><a href="https://pandas.pydata.org/docs/# ">Logistic Regression</a></li>
-                            <li><a href="https://pandas.pydata.org/docs/# ">CART</a></li>
-                            <li><a href="https://pandas.pydata.org/docs/# ">K_means</a></li>
-                            <li><a href="https://pandas.pydata.org/docs/# ">Trees</a></li>
+                            <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html">KNN</a></li>
+                            <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">Logistic Regression</a></li>
+                            <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html ">RandomForestClassifier</a></li>
+                            <li>CART</li>
+                            <li>K_means</li>
+                            <li>Trees</li>
 
                         </ul>
                     </div>
@@ -304,6 +318,8 @@
                             <li>
                                 <a href="https://github.com/SurabhiSood/titanic-survival-machine-learning ">GitHub Repository</a>
                             </li>
+                                                        <li>
+                                <a href="https://pg-titanic-survival-prediction.herokuapp.com/index.html">Heroku</a>
                             </li>
 
                             <li>

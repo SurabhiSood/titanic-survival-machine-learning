@@ -37,7 +37,7 @@ def index():
         if prediction == 1: 
             prediction_stmt = "Great job! You survived the Titanic!"
         else: 
-            prediction_stmt = "This will be your last cruise. :( "
+            prediction_stmt = "This will be your last cruise  :( "
 
         return flask.render_template('index.html',
                                      original_input={'Pclass': pclass,
