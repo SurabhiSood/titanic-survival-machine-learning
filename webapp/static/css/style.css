@@ -140,6 +140,8 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    margin: 0px auto;
+    text-align: center;
 }
 
 body {
@@ -2600,6 +2602,9 @@ dl dd {
     overflow-x: auto;
     margin-left: auto;
     margin-right: auto;
+    tr:hover {
+        background-color: #f5f5f5;
+    }
 }
 
 table {
@@ -2626,7 +2631,7 @@ table th {
     font-size: 0.9em;
     font-weight: 600;
     padding: 0 0.75em 0.75em 0.75em;
-    text-align: left;
+    text-align: center;
 }
 
 table thead {
@@ -3179,4 +3184,41 @@ button:disabled,
         flex-direction: column;
         text-align: center;
     }
+}
+
+
+/* ********* CUSTOM ********* */
+
+.metho-div {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.metho-img {
+    vertical-align: baseline;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(14, 136, 187);
+    color: white;
+    cursor: default;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+#myBtn:hover {
+    background-color: #bbb;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    color: #5385c1;
 }

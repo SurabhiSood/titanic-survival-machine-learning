@@ -45,9 +45,6 @@
                     <a class="nav-link" href="methodology.html">Methodology <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="templates/about.html">Test <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="about.html">About Us</a>
                 </li>
 
@@ -96,10 +93,6 @@
                         <label>Age:</label><br>
                         <input type="number" name="Age" id="name" value="" min="0" max="123" placeholder="Age" oninput="validity.valid||(value='');" required class="submit-button">
                     </div>
-                    <!-- <input name="Age" type="number" min="0" max="123" oninput="validity.valid||(value='');" required> -->
-                    <!-- TODO
-            Need to auto-notify manual entries that are <0 & >123 
-            Current code will reset with no notification-->
 
                     <div class="col-sm-4">
                         <label>Siblings/Spouses:</label><br>
@@ -114,7 +107,7 @@
                     <div class="col-sm-2">
 
                         <label>Fare:</label><br>
-                        <input name="Fare" type="number" min="0" max="515" oninput="validity.valid||(value='');" value placeholder="$" required class="submit-button">
+                        <input name="Fare" type="number" min="0" max="515" oninput="validity.valid||(value='');" value placeholder="£" required class="submit-button">
                     </div>
 
 
@@ -122,7 +115,6 @@
                     <div class="col-sm-12">
                         <div class="select-wrapper">
                             <label for="embarked">From which city will you board?:</label>
-                            <!-- <input list='Embarked' id="embarked" required> -->
                             <select name="Embarked" id="Embarked">
                             <option value="1">Cherbourg</option>
                             <option value="2">Queenstown</option>
@@ -130,10 +122,10 @@
                         </select>
                         </div>
                     </div>
-                    <!-- <br><br><br><br><br> -->
 
-                    <!-- <input class="button special" type="submit" value="Submit"> -->
-                    <input type="submit">
+
+                    <input class="button special" type="submit" value="Submit">
+                    <!-- <input type="submit"> -->
                     <!-- 2671 2787  -->
                 </div>
             </fieldset>
@@ -141,12 +133,11 @@
 
 
         <div class="result" align="center">
-            <!-- {% if result %} {% for variable, value in original_input.items() %}
-        <b>{{ variable }}</b> : {{ value }} {% endfor %} -->
+
             <br>
-            <!-- <br> Likelihood of survival: -->
+
             <p style="font-size:50px">{{ result }}</p>
-            {% endif %}
+
         </div>
 
         <!-- Footer -->

@@ -4,18 +4,14 @@ import flask
 import pickle
 import pandas as pd
 from flask import Flask, render_template, request
+import joblib
 
-# Use pickle to load in the pre-trained model.
 with open(f'model/trained_knn_model.pkl', 'rb') as f:
-    model = pickle.load(f)
+    model = joblib.load(f)
 
 app = flask.Flask(__name__, template_folder='templates')
 
-# @app.route('/')
-# def index():
-#     return(flask.render_template('index.html'))
-# if __name__ == '__index__':
-#     app.run()
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index.html', methods=['GET', 'POST'])
@@ -33,7 +29,7 @@ def index():
         embarked    = flask.request.form['Embarked']
         
         input_variables = pd.DataFrame([[pclass, sex, age, sibsp, parch, fare, embarked]],
-                                       columns=['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked'],
+                                       columns=['Pclass', 'Sex', 'Age', 'SipSp', 'Parch', 'Fare', 'Embarked'],
                                        dtype=float,
                                        index=['input'])
 
@@ -52,7 +48,6 @@ def index():
                                      'Fare': fare,
                                      'Embarked': embarked},
                                      result=prediction_stmt,
-# declare result var as global var ???
                                      )
 
 @app.route('/about.html')
