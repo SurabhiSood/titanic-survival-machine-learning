@@ -59,7 +59,7 @@ Below is a detailed description of the dataset:
 ![Data](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/Preethi_branch/static/img/densityplot.png)
 
 
-### Prediction Models
+### Prediction Models with their accuracy
 
 1. KNN - 86%
 2. Logistic Regression - 84%
