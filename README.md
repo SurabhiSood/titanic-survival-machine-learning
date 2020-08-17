@@ -1,5 +1,5 @@
 # Titanic: Machine Learning from Disaster
-![Titanic](webapp/img/titanicimg.jpg)
+![Titanic](webapp/static/img/titanicimg.jpg)
 
 ### Goal 
 
