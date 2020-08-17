@@ -14,7 +14,7 @@ Below is a detailed description of the dataset:
 
 ### Process
 
-* We start with Data Visualization post importing the data set via pandas.The chart gives us a sense the variables, and informs us of the missing observations in each column.We see that Age, Cabin, Fare and Embarked columns have missing values which we will impute in the course of Data pre-processing.
+* The extracted dataset had some missing values (see dataset information below), which were replaced by calculated average values in the ‘age’ and ‘fare’ columns and using backfill method in the ‘embarked’ column. Some columns were dropped, as they did not hold any relevant information for the passenger survival prediction analysis.
 
 ![Missing Values](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/Dataset.PNG)
 
