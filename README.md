@@ -1,9 +1,17 @@
-### Goal 
-RMS Titanic was a British passenger liner operated by the White Star Line that sank in the North Atlantic Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage from Southampton to New York City.Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. By examining factors such as class, sex, and age, in our dataset we will experiment with different machine learning algorithms and build a program that can predict whether a given passenger would have survived this disaster. To get sense of the variables, their class type, and the first few observations of each. We know we’re working with 1309 observations of 14 variables. To make things a bit more explicit since a couple of the variable names aren’t 100% illuminating, here’s what we’ve got to deal with:
+# Titanic: Machine Learning from Disaster
+![Titanic](img/titanicimg.jpg)
 
+### Goal 
+
+RMS Titanic was a British passenger liner operated by the White Star Line that sank in the North Atlantic Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage from Southampton to New York City. Of the estimated 2,224 passengers and crew aboard, more than 1,500 died. While there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others. By analyzing features, such as class, gender, age, number of children, number of parents, fare, and more, in the Titanic passenger dataset, we trained eight different machine learning models and selected the one with the highest accuracy score to build an application that can predict whether a given passenger would have survived this disaster or not.
+
+### Data
+
+The dataset consisted of 1,309 observations and 14 variables including the engineered features.
+Below is a detailed description of the dataset:
 ![Overview](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/Overview.PNG)
 
-### Process -
+### Process
 
 * We start with Data Visualization post importing the data set via pandas.The chart gives us a sense the variables, and informs us of the missing observations in each column.We see that Age, Cabin, Fare and Embarked columns have missing values which we will impute in the course of Data pre-processing.
 
@@ -49,9 +57,9 @@ RMS Titanic was a British passenger liner operated by the White Star Line that s
 ![Data](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/Preethi_branch/static/img/densityplot.png)
 
 
-### Prediction Models-
+### Prediction Models
 
-1. KNN- 86%
+1. KNN - 86%
 2. Logistic Regression - 84%
 3. RandomForestClassifier - 77%
 
