@@ -44,7 +44,7 @@ Below is a detailed description of the dataset:
 
 * The following visualization shows that the fare would be somewhere greater than £7 and less than £10, this adds another filter to calculate the mean. Post applying all three filters, the calculated mean of a fare was £8.03 ponds. Which replaced the NaN value in Mr. Storey's fare!
 
-![Imputing Missing Value in Fare Column](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/FamilySizeAndSurvival.jpg)
+![Imputing Missing Value in Fare Column](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/FarePlot.jpg)
 
 * The median fare for a first-class passenger departing from Charbourg (‘C’) port coincides nicely with the £80 paid by other embarkment-deficient passengers. As a result, all NaN values in the ‘embarked’ column have been replaced by ‘C’.
 
