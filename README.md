@@ -22,7 +22,7 @@ Below is a detailed description of the dataset:
 
 ![Survival of Passengers](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/survived-perished.PNG)
 
-* The below chart demonstrates distribution of passengers by age. 40% of the passengers were between 20 and 30 years ald.
+* The below chart demonstrates distribution of passengers by age. 40% of the passengers were between 20 and 30 years old.
 
 ![Age Demographics of Passengers](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/age-survival.PNG)
 
