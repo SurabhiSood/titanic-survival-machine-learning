@@ -7,8 +7,9 @@ RMS Titanic was a British passenger liner operated by the White Star Line that s
 
 ### Data
 
-The dataset consisted of 1,309 observations and 14 variables including the engineered features.
+The dataset consisted of 1,309 observations and 14 variables not including the engineered features.
 Below is a detailed description of the dataset:
+
 ![Overview](https://github.com/SurabhiSood/titanic-survival-machine-learning/blob/master/webapp/static/img/Overview.PNG)
 
 ### Process
