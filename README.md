@@ -51,7 +51,7 @@ RMS Titanic was a British passenger liner operated by the White Star Line that s
 
 ### Prediction Models-
 
-1. KNN-
+1. KNN- 86%
 2. Logistic Regression - 84%
 3. RandomForestClassifier - 77%
 
